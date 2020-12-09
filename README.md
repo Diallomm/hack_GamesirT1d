@@ -1,5 +1,7 @@
 # __FR__
 
+![Drone controller](https://raw.githubusercontent.com/Diallomm/hack_GamesirT1d/main/images/01.jpg)
+
 les drones DJI tello (petit drone intérieur pour enfants) ont une manette spéciale pour pouvoir les piloter sans toucher au smartphone, c'est le gamesir T1d. Le problème avec cette manette qui est très joli, on ne peut pas utiliser en dehors du pilotage de drone*, ce qui n'est pas cool quand on est maker bricoleur.
 
 je me suis lancé les défis de trouver une solution pour utiliser le drone avec ne m'importe qu'appareils avec un bluetooth (ordinateur pour le moment). Des recherches sur le web m’ont permis de trouver ce site avec un code [original ](https://www.hsli.top/%E5%A4%A7%E7%96%86%E7%89%B9%E6%B4%9BTELLO%E6%89%8B%E6%9F%84%E7%9B%96%E4%B8%96%E5%B0%8F%E9%B8%A1Gamesir-T1D%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5%E7%A0%B4%E8%A7%A3DIY.html")  qui était en python 2, j'ai ajouté quelques modifications pour le mettre en python3, puis ajouter quelques fonctionnalités pour pouvoir simuler les touches du clavier 
@@ -37,12 +39,17 @@ sur linux ca donne ca
 - 3 ouvrir le code avec votre éditeur et à la 9éme ligne remplacer l'adresse Mac bluetooth par celui de votre manette  (il est mentionné sur l'étiquette de la manette).
 
 
+![Mac](https://raw.githubusercontent.com/Diallomm/hack_GamesirT1d/main/images/mac.png)
+
+
 - 4 vous pouvez excuter le script (ou apportez des modification)
 
 		python3 src/Gamecontrol.py 
 
 
 ## A vous d'améliorer le script
+
+![Debug](https://raw.githubusercontent.com/Diallomm/hack_GamesirT1d/main/images/debug.png)
 
 ce code est basique c'est à vous avec la librairie comme pynput de le compléter, c'était juste un Proof of concept, mais il y a  plein de possibilité. dans cet exemple j'ai juste configuré les 4 touches de directions mais vous pouvez compléter le reste il suffit juste de décommenter la partie debug du code, allumer la manette et voir sur le terminal le numéro qui s'affiche quand vos appuez sur une touche et en conséquence utilisée une condition (if) pour configurer d'autres touches 
 		
@@ -51,6 +58,8 @@ Email: diallo@bloctechno.com
 
 
 # __EN__
+
+![Drone controller](https://raw.githubusercontent.com/Diallomm/hack_GamesirT1d/main/images/01.jpg)
 
 the DJI tello drones (small indoor drone for children) have a special controller to be able to pilot them without touching the smartphone, it's the gamesir T1d. The problem with this joystick is that it's very pretty, you can't use it outside of drone piloting*, which is not cool when you're a do-it-yourself maker.
 
@@ -87,12 +96,16 @@ on linux it looks like this
 
 - 3 open the code with your editor and on the 9th line replace the Mac bluetooth address by the one of your controller (it is mentioned on the label of the controller).
 
+![Mac](https://raw.githubusercontent.com/Diallomm/hack_GamesirT1d/main/images/mac.png)
+
 - 4 you can run the script (or make changes)
 	
 		python3 src/Gamecontrol.py 
 
 
 ## It's up to you to improve the script
+
+![Debug](https://raw.githubusercontent.com/Diallomm/hack_GamesirT1d/main/images/debug.png)
 
 this code is basic it's up to you with the library as a pynput to complete it, it was just a Proof of concept, but there are plenty of possibilities. in this example I just configured the 4 direction keys but you can complete the rest just uncomment the debug part of the code, turn on the joystick and see on the terminal the number that appears when you press a key and consequently used a condition (if) to configure other keys. 
 		
