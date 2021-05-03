@@ -42,9 +42,9 @@ class T1D:
         self.Left = int(bool(data[11] == 0x07))
         self.Right= int(bool(data[11] == 0x03))
 
-        self.LX = int((data[2] << 2) + ((data[3] & 0xc) >> 2))
+        self.LX = int(((data[2] ) << 2) | (data[3] >> 6) )
         self.LY = int(((data[3] & 0x3f) << 4) + (data[4]>>4))
-        self.RX = int(((data[4] & 0xf) << 6) + ((data[5] & 0xc) >> 2) )
+        self.RX = int(((data[4] & 0xf) << 6) | (data[5] >> 2) )
         self.RY = int(((data[5] & 0x3) << 8) + ((data[6])))
 
     def __str__(self):
@@ -53,7 +53,7 @@ class T1D:
                 )
 
 if __name__ == "__main__":
-    controller = T1D('C6:86:A1:05:42:54')
+    controller = T1D('C6:86:A1:05:42:54') # Example address
     while 1:
         if controller.get_state():
             print(controller)
